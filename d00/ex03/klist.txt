@@ -1,0 +1,6 @@
+Credentials cache: API:30219
+        Principal: maljean@42.US.ORG
+
+  Issued                Expires               Principal
+Oct 24 01:07:26 2017  Oct 24 11:07:26 2017  krbtgt/42.US.ORG@42.US.ORG
+Oct 24 01:49:27 2017  Oct 24 11:07:26 2017  host/vgs-fn1.42.us.org@42.US.ORG
