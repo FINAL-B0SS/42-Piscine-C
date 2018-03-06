@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maljean <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/26 23:54:44 by maljean           #+#    #+#             */
-/*   Updated: 2017/10/27 15:57:30 by maljean          ###   ########.fr       */
+/*   Created: 2017/10/28 10:13:14 by maljean           #+#    #+#             */
+/*   Updated: 2017/10/28 13:48:02 by maljean          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+int	ft_iterative_factorial(int nb)
 {
-	*nbr = 42;
+	int count;
+	int result;
+
+	if (nb < 0 || nb > 12)
+	{
+		return (0);
+	}
+	count = 2;
+	result = 1;
+	while (count <= nb)
+	{
+		result *= count;
+		count++;
+	}
+	return (result);
 }

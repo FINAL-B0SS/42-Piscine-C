@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maljean <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/27 00:50:47 by maljean           #+#    #+#             */
-/*   Updated: 2017/10/27 16:26:25 by maljean          ###   ########.fr       */
+/*   Created: 2017/10/28 11:54:31 by maljean           #+#    #+#             */
+/*   Updated: 2017/10/28 14:33:41 by maljean          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int	ft_is_prime(int nb)
 {
-	int i;
+	int nbr;
+	int bookmark;
 
-	i = 0;
-	while (str[i])
+	if (nb <= 1)
 	{
-		ft_putchar(str[i]);
-		i++;
+		return (0);
 	}
+	else
+	{
+		nbr = 1;
+		bookmark = 1;
+		while (nbr <= nb / 2)
+		{
+			if (nb % nbr == 0 && !(nbr == 1))
+			{
+				bookmark = 0;
+				break ;
+			}
+			nbr++;
+		}
+	}
+	return (bookmark);
 }
